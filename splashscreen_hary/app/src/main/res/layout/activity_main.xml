@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:src="@drawable/logo_hary"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:alpha="0"/>
+
+    <TextView
+        android:id="@+id/tv_haryc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="haryc_"
+        android:textSize="24sp"
+        android:textColor="@color/gray"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"/>
+</RelativeLayout>

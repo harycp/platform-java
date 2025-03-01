@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">MyViewAndViews</string>
+
+    <string name="content_text">Keluarga saya berasal dari 2 suku yang berbeda,
+        yaitu dari palembang dan jawa, tentunya 2 suku ini memiliki watak yang berbeda.
+        Selain watak, banyak hal hal perbedaan lain seperti makanan, budaya, dan lain lain.
+        Tetapi dari perbedaan itulah suatu keluarga bisa menjadi lebih memperbaiki satu sama lain,
+        untuk menjadikan suatu hal yang lebih indah.
+        </string>
+
+    <string name="content_ortu_display">Ayah berasal dari suku palembang,\n
+        dan Ibu berasal dari suku jawa</string>
+
+    <string name="content_kaka_display">Memiliki 2 kaka, kaka pertama perempuan\n
+        Kaka kedua laki laki, yang dimana kaka laki laki sudah menikah.
+        </string>
+
+    <string name="content_me_display">Penulis adalah anak terakhir Saat ini sedang berkuliah di UPN Veteran Jakarta,\nJurusan Informatika, dan ini adalah tugas mata kuliahnya,\nUntuk membuat suatu view and views di platform android.
+    </string>
+
+    <string name="family">Berjumlah 5 anggota keluarga</string>
+
+    <string name="sub_judul">Anggota Keluarga</string>
+
+    <string name="orang_tua">Orang Tua</string>
+    <string name="kaka">Kaka</string>
+    <string name="penulis">Hary</string>
+    <string name="hary">Penulis</string>
+    <string name="my_name">Hary Capri</string>
+
+    <string name="next">Selengkapnya</string>
+    <string name="dummy_value">Hary Capri\'s Family </string>
+    <string name="dummy_photos">6 photos</string>
+
+
+</resources>
