@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Layout GetContact</string>
+    <string name="app_name">Generate Jokes</string>
+
+    <!-- Profile Section -->
+    <string name="profile_name">Hary Capri</string>
+    <string name="profile_number">+62888888888</string>
+    <string name="user_tag">@User15789453</string>
+    <string name="premium_badge">PREMIUM</string>
+
+    <!-- UI Elements -->
+    <string name="generate_quote">Generate Jokes</string>
+    <string name="quote_default">Click the button to generate a jokes.</string>
+    <string name="fetch_failed">Failed to fetch joke!</string>
+    <string name="parse_error">Error parsing joke!</string>
+
+    <string name="hint_enter_name">Enter your name</string>
+    <string name="name_greeting">Hey %s, here’s a joke for you:</string>
+    <string name="error_no_name">Please enter your name first!</string>
+
 </resources>
