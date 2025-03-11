@@ -1,5 +1,6 @@
 package com.example.layoutgetcontact;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText etName;
     private OkHttpClient client = new OkHttpClient();
 
+    private  static final String STATE_RESULT = "state_result";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +55,17 @@ public class MainActivity extends AppCompatActivity {
             if (!name.isEmpty()) {
                 fetchRandomQuote(name);
             } else {
+                etName.setError(getString(R.string.error_no_name));
+                etName.requestFocus();
                 Toast.makeText(MainActivity.this, getString(R.string.error_no_name), Toast.LENGTH_SHORT).show();
             }
         });
+
+        if (savedInstanceState != null) {
+            String result = savedInstanceState.getString(STATE_RESULT);
+            tvQuote.setText(result);
+        }
+
     }
 
     private void fetchRandomQuote(String name) {
@@ -90,4 +101,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(STATE_RESULT, tvQuote.getText().toString());
+    }
+
 }

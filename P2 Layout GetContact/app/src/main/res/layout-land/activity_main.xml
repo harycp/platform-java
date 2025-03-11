@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:background="#FFFFFF"
     android:padding="16dp"
     android:id="@+id/main"
@@ -13,11 +13,11 @@
 
     <!-- Profile Section -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="16dp">
+        android:layout_weight="1">
 
         <ImageView
             android:id="@+id/profile_image"
@@ -70,37 +70,47 @@
             android:layout_marginTop="4dp" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_enter_name"
-        android:textSize="16sp"
-        android:padding="8dp"
-        android:background="@android:color/darker_gray"
-        android:textColorHint="#666"
-        android:layout_marginBottom="8dp"/>
+    <!-- Input & Quotes Section (Kanan) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:paddingStart="16dp">
 
-    <!-- Quotes Section -->
-    <Button
-        android:id="@+id/btn_generate_quote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/generate_quote"
-        android:layout_gravity="center_horizontal"
-        android:padding="8dp"
-        android:backgroundTint="@color/teal_700"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_enter_name"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:background="@android:color/darker_gray"
+            android:textColorHint="#666"
+            android:layout_marginBottom="8dp"/>
 
-    <TextView
-        android:id="@+id/tv_quote"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/quote_default"
-        android:textSize="16sp"
-        android:textColor="#333"
-        android:gravity="center"
-        android:padding="8dp"
-        android:textStyle="italic"/>
+        <!-- Quotes Section -->
+        <Button
+            android:id="@+id/btn_generate_quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/generate_quote"
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quote_default"
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textStyle="italic"/>
+    </LinearLayout>
+
 </LinearLayout>

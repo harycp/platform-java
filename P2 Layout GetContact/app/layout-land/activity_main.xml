@@ -8,7 +8,6 @@
     android:background="#FFFFFF"
     android:padding="16dp"
     android:id="@+id/main"
-    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <!-- Profile Section -->
