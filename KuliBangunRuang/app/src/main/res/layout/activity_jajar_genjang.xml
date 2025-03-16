@@ -1,10 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JajarGenjangActivity">
+    tools:context=".JajarGenjangActivity"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/inputAlas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:hint="@string/masukkan_alas"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/inputTinggi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/masukkan_tinggi"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/inputAlas"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hitung_luas"
+        android:layout_below="@id/inputTinggi"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txtHasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hasil"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/btnHitung"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="←"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="700dp"
+        android:fontFamily="sans-serif-medium" />
+
+
+</RelativeLayout>

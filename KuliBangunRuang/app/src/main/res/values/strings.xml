@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Kuli Bangun Ruang</string>
+    <string name="luas_jajar_genjang">Luas Jajar Genjang</string>
+    <string name="luas_lingkaran">Luas Lingkaran</string>
+    <string name="volume_limas">Volume Limas</string>
+    <string name="masukkan_luas_alas">Masukkan Luas Alas</string>
+    <string name="masukkan_tinggi_limas">Masukkan Tinggi Limas</string>
+    <string name="hitung_volume">Hitung Volume</string>
+    <string name="hasil">Hasil:</string>
+    <string name="masukkan_alas">Masukkan Alas</string>
+    <string name="masukkan_tinggi">Masukkan Tinggi</string>
+    <string name="hitung_luas">Hitung Luas</string>
+    <string name="masukkan_jari_jari">Masukkan Jari-jari</string>
 </resources>
