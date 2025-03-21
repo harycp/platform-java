@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +19,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnMoveActivity;
     private Button btnMoveWithDataActivity;
     private Button btnDialPhone;
-
+    private Button btnMoveWithObject;
+    private Button btnMoveForResult;
+    private TextView tvResult;
+    private int REQUEST_CODE = 100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnDialPhone = (Button)findViewById(R.id.btn_dial_number);
         btnDialPhone.setOnClickListener(this);
+
+        btnMoveWithObject = (Button)findViewById(R.id.btn_move_activity_object);
+        btnMoveWithObject.setOnClickListener(this);
+
+        btnMoveForResult = (Button)findViewById(R.id.btn_move_for_result);
+        btnMoveForResult.setOnClickListener(this);
+        tvResult = (TextView)findViewById(R.id.tv_result);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -58,6 +69,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent dialPhoneIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phoneNumber));
             startActivity(dialPhoneIntent);
         }
+        if (v.getId() == R.id.btn_move_activity_object) {
+            Person mPerson = new Person();
+            mPerson.setName("Hary Capri");
+            mPerson.setAge(20);
+            mPerson.setEmail("2210511023@mahasiswa.upnvj.ac.id");
+            mPerson.setCity("Jakarta");
+
+            Intent moveWithObjectIntent = new Intent(MainActivity.this, MoveWithObjectActivity.class);
+            moveWithObjectIntent.putExtra(MoveWithObjectActivity.EXTRA_PERSON, mPerson);
+            startActivity(moveWithObjectIntent);
+        }
+        if(v.getId() == R.id.btn_move_for_result){
+            Intent moveForResultIntent = new Intent(MainActivity.this, MoveForResultActivity.class);
+            startActivityForResult(moveForResultIntent, REQUEST_CODE);
+        }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode,resultCode, data);
+        if (requestCode == REQUEST_CODE){
+            if (resultCode == MoveForResultActivity.RESULT_CODE){
+                int selectedValue = data.getIntExtra(MoveForResultActivity.EXTRA_SELECTED_VALUE, 0);
+                tvResult.setText("Hasil : "+ selectedValue);
+            }
+        }
+    }
 }
