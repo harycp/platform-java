@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Profile Hary Capri</string>
+
+    <string name="content_text">Full Stack Developer dari UPN “Veteran” Jakarta
+        dengan pengalaman langsung di Ditjen Diktiristek. Terampil dalam MEVN dan Laravel u
+        ntuk membangun aplikasi yang efisien, terukur, dan berpusat pada pengguna.
+        Memiliki rekam jejak yang terbukti dalam memimpin proyek, mengoptimalkan alur kerja,
+        dan mengintegrasikan teknologi web modern.
+        </string>
+
+    <string name="nama_display">Hary Capri</string>
+
+    <string name="nim_display">2210511023</string>
+
+    <string name="prodi_display">S1 Informatika</string>
+
+    <string name="kelas_display">B</string>
+
+    <string name="family">Berjumlah 5 anggota keluarga</string>
+
+    <string name="sub_judul">Data diri</string>
+
+    <string name="nama">Nama : </string>
+    <string name="nim">Nim   : </string>
+    <string name="prodi">Prodi  : </string>
+    <string name="kelas">Kelas   : </string>
+
+    <string name="next">Selengkapnya</string>
+    <string name="dummy_value">Hary Capri\'s Family </string>
+    <string name="dummy_photos">6 photos</string>
+
+
+</resources>

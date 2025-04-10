@@ -8,7 +8,7 @@ public class Profile implements Parcelable {
 
     private  String fullName;
     private String name;
-    private int nim;
+    private long nim;
     private String address;
     private String hobby;
     private String ideal;
@@ -29,11 +29,11 @@ public class Profile implements Parcelable {
         this.name = name;
     }
 
-    public int getNim() {
+    public long getNim() {
         return nim;
     }
 
-    public void setNim(int nim) {
+    public void setNim(long nim) {
         this.nim = nim;
     }
 
@@ -70,7 +70,7 @@ public class Profile implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.fullName);
         dest.writeString(this.name);
-        dest.writeInt(this.nim);
+        dest.writeLong(this.nim);
         dest.writeString(this.address);
         dest.writeString(this.hobby);
         dest.writeString(this.ideal);
@@ -82,7 +82,7 @@ public class Profile implements Parcelable {
     protected Profile(Parcel in) {
         this.fullName = in.readString();
         this.name = in.readString();
-        this.nim = in.readInt();
+        this.nim = in.readLong();
         this.address = in.readString();
         this.hobby = in.readString();
         this.ideal = in.readString();
