@@ -1,23 +1,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginBottom="8dp"
-    android:paddingHorizontal="8dp">
+    android:orientation="vertical"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="0dp"
+    android:background="?android:selectableItemBackground"
+    android:layout_marginBottom="8dp">
 
     <TextView
-        style="@style/TextSpec.Field"
-        android:layout_width="wrap_content"
+        android:id="@+id/fieldLabel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:textSize="14sp"
-        android:text="@string/prodi" />
+        android:text="@string/prodi"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-medium" />
 
     <TextView
-        style="@style/TextSpec.Value"
-        android:layout_width="0dp"
+        android:id="@+id/fieldValue"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textSize="14sp"
-        android:text="@string/prodi_display" />
+        android:text="@string/prodi_display"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif" />
 </LinearLayout>

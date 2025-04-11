@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Profile Hary Capri");
+            getSupportActionBar().setTitle("Profil Hary Capri");
         }
 
         btnNextActivity = (Button)findViewById(R.id.btn_nextActivity);

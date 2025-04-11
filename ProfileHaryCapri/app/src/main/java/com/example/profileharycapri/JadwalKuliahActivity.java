@@ -28,6 +28,12 @@ public class JadwalKuliahActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_jadwal_kuliah);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.baseline_arrow_back_24);
+            getSupportActionBar().setTitle("Detail Jadwal Kuliah Semester 6");
+        }
+
         LinearLayout container = findViewById(R.id.container_schedule);
         ArrayList<Schedule> scheduleList = getIntent().getParcelableArrayListExtra(EXTRA_SCHEDULE);
 
@@ -93,5 +99,11 @@ public class JadwalKuliahActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

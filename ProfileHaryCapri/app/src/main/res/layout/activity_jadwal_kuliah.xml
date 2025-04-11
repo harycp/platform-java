@@ -18,6 +18,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:divider="?android:attr/dividerHorizontal"
-        android:showDividers="middle" />
+        android:fontFamily="sans-serif-medium"
+        android:showDividers="middle"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"/>
 
 </RelativeLayout>
