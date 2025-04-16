@@ -1,0 +1,165 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Header Image -->
+        <ImageView
+            android:clipToOutline="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/burgo"
+            android:background="@drawable/rounded_top" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_oneui_box"
+                android:padding="20dp">
+
+                <!-- Bio -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/burgo_description"
+                    android:lineSpacingExtra="6dp"
+                    android:letterSpacing="0.01"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="16dp"
+                    android:justificationMode="inter_word" />
+
+                <!-- Nama -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Makanan"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        android:fontFamily="inter_word" />
+
+                    <TextView
+                        android:id="@+id/fieldNama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Burgo"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="inter_word" />
+                </LinearLayout>
+
+                <!-- Asal -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Asal Makanan"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        android:fontFamily="inter_word" />
+
+                    <TextView
+                        android:id="@+id/fieldAsal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Palembang"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="inter_word" />
+                </LinearLayout>
+
+                <!-- Harga -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Harga Makanan"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        android:fontFamily="inter_word" />
+
+                    <TextView
+                        android:id="@+id/fieldHarga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 25.000"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="inter_word" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hary"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_shape"
+                android:clipToOutline="true"
+                />
+
+        </LinearLayout>
+
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/btn_nextActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tujuan Destinasi Wisata Impian"
+            android:backgroundTint="@color/orange"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="inter_word"
+            android:background="@drawable/rounded_button" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">uts praktikum</string>
+
+    <string name="burgo_description">
+        Makanan ini adalah salah satu makanan khas daerah keluarga saya
+        yaitu palembang yang saya jadikan makanan favorit dikarenakan begitu nikmat.
+        Semua komponen makanan dari makanan ini tidak bisa dilewatkan rasanya,
+        kuah opor yang berempah dan komponen lainnya begitu menyatu
+        menciptakan rasa yang tidak bisa dijelaskan dengan kata-kata.
+    </string>
+</resources>

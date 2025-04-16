@@ -1,0 +1,141 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    tools:context=".DestinasiWisataActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Header Image -->
+        <ImageView
+            android:clipToOutline="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/danau_zurich"
+            android:background="@drawable/rounded_top" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_oneui_box"
+                android:padding="20dp">
+
+                <!-- Bio -->
+                <TextView
+                    android:id="@+id/fieldDeskripsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6dp"
+                    android:letterSpacing="0.01"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="16dp"
+                    android:justificationMode="inter_word" />
+
+                <!-- Nama -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        android:fontFamily="inter_word" />
+
+                    <TextView
+                        android:id="@+id/fieldNama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="inter_word" />
+                </LinearLayout>
+
+                <!-- Lokasi -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        android:fontFamily="inter_word" />
+
+                    <TextView
+                        android:id="@+id/fieldLokasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="inter_word" />
+                </LinearLayout>
+
+                <!-- Keunikan -->
+                <LinearLayout
+                    android:id="@+id/containerKeunikan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Keunikan"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        android:fontFamily="inter_word"
+                        android:layout_marginBottom="4dp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kembali"
+            android:backgroundTint="@color/orange"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="inter_word"
+            android:background="@drawable/rounded_button" />
+    </LinearLayout>
+</ScrollView>
