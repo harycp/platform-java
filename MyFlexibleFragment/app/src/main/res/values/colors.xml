@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core Material 3 Colors -->
+    <color name="primary">#6200EE</color> <!-- Primary color -->
+    <color name="primary_variant">#3700B3</color> <!-- Darker variant of primary -->
+    <color name="on_primary">#FFFFFF</color> <!-- Text/icons on primary -->
+
+    <color name="secondary">#03DAC6</color> <!-- Secondary color -->
+    <color name="secondary_variant">#018786</color> <!-- Darker variant of secondary -->
+    <color name="on_secondary">#000000</color> <!-- Text/icons on secondary -->
+
+    <color name="background">#FFFFFF</color> <!-- Light mode background -->
+    <color name="on_background">#000000</color> <!-- Text/icons on background -->
+
+    <color name="surface">#FFFFFF</color> <!-- Surface color for cards/dialogs -->
+    <color name="on_surface">#000000</color> <!-- Text/icons on surface -->
+
+    <color name="error">#B00020</color> <!-- Error color -->
+    <color name="on_error">#FFFFFF</color> <!-- Text/icons on error -->
+
+    <!-- Additional Default Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Custom App Colors (optional) -->
+    <color name="custom_accent">#FFC107</color> <!-- Example custom accent color -->
+</resources>
