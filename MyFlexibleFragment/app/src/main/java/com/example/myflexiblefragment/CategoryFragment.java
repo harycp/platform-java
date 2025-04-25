@@ -3,6 +3,8 @@ package com.example.myflexiblefragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,7 +58,21 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btn_detail_category) {
-            //
+            DetailCategoryFragment detailCategoryFragment = new DetailCategoryFragment();
+
+            Bundle bundle = new Bundle();
+            bundle.putString(DetailCategoryFragment.EXTRA_NAME, "Lifestyle");
+            String description = "Kategori ini akan berisi produk-produk lifestyle";
+
+            detailCategoryFragment.setArguments(bundle);
+            detailCategoryFragment.setDescription(description);
+            FragmentManager fragmentManager = getFragmentManager();
+            if (fragmentManager != null) {
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frame_container, detailCategoryFragment, DetailCategoryFragment.class.getSimpleName());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
         }
     }
 }

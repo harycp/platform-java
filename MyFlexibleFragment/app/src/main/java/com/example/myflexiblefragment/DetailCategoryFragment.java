@@ -1,15 +1,18 @@
 package com.example.myflexiblefragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DetailCategoryFragment extends Fragment implements View.OnClickListener{
 
@@ -94,10 +97,18 @@ public class DetailCategoryFragment extends Fragment implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_profile) {
-            //
-        }
-        if (v.getId() == R.id.btn_show_dialog) {
-            //
+            getActivity().onBackPressed();
+        } else if (v.getId() == R.id.btn_show_dialog) {
+            OptionDialogFragment mOptionDialogFragment = new OptionDialogFragment();
+            mOptionDialogFragment.setOnOptionDialogListener(new OptionDialogFragment.OnOptionDialogListener() {
+                @Override
+                public void onOptionChoosen(String text) {
+                    Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            FragmentManager mFragmentManager = getParentFragmentManager();
+            mOptionDialogFragment.show(mFragmentManager, OptionDialogFragment.class.getSimpleName());
         }
     }
 }
