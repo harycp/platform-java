@@ -61,8 +61,8 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
             DetailCategoryFragment detailCategoryFragment = new DetailCategoryFragment();
 
             Bundle bundle = new Bundle();
-            bundle.putString(DetailCategoryFragment.EXTRA_NAME, "Lifestyle");
-            String description = "Kategori ini akan berisi produk-produk lifestyle";
+            bundle.putString(DetailCategoryFragment.EXTRA_NAME, "UPN Veteran Jakarta");
+            String description = "Fakultas Ilmu Komputer";
 
             detailCategoryFragment.setArguments(bundle);
             detailCategoryFragment.setDescription(description);

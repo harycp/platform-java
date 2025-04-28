@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Siapa pelatih tersukses Arsenal?"
+        android:text="Kelompok Berapa Kelompok Kalian ?"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:textSize="18sp"
@@ -25,31 +25,66 @@
         android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/rb_awr"
+            android:id="@+id/rb_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Arsene Wenger"
+            android:text="1"
             android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
         <RadioButton
-            android:id="@+id/rb_unai"
+            android:id="@+id/rb_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Unai Emery"
+            android:text="2"
             android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
         <RadioButton
-            android:id="@+id/rb_geor"
+            android:id="@+id/rb_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="George Graham"
+            android:text="3"
             android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
         <RadioButton
-            android:id="@+id/rb_arteta"
+            android:id="@+id/rb_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mikel Arteta"
+            android:text="4"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        <RadioButton
+            android:id="@+id/rb_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        <RadioButton
+            android:id="@+id/rb_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        <RadioButton
+            android:id="@+id/rb_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        <RadioButton
+            android:id="@+id/rb_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        <RadioButton
+            android:id="@+id/rb_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8"
             android:layout_marginBottom="@dimen/activity_vertical_margin" />
     </RadioGroup>
 
