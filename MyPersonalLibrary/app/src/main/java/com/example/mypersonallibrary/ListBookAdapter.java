@@ -17,8 +17,15 @@ import java.util.ArrayList;
 
 public class ListBookAdapter extends RecyclerView.Adapter<ListBookAdapter.ListViewHolder> {
     private ArrayList<Book> listBook;
+
     public ListBookAdapter(ArrayList<Book> list) {
         this.listBook = list;
+    }
+
+    private OnItemClickCallback onItemClickCallback;
+
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
     }
 
 
@@ -38,6 +45,17 @@ public class ListBookAdapter extends RecyclerView.Adapter<ListBookAdapter.ListVi
                 .into(holder.imgPhoto);
         holder.tvTitle.setText(book.getTitle());
         holder.tvDetail.setText(book.getDetail());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickCallback.onItemClicked(listBook.get(holder.getAdapterPosition()));
+            }
+        });
+    }
+
+    public interface OnItemClickCallback {
+        void onItemClicked(Book data);
     }
 
     @Override
