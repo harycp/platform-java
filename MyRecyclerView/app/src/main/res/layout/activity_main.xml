@@ -12,4 +12,5 @@
         android:id="@+id/rv_heroes"
         tools:listitem="@layout/item_row_hero"/>
 
+
 </RelativeLayout>

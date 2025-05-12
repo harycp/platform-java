@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,12 +18,15 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rvHeroes;
     private ArrayList<Hero> list = new ArrayList<>();
+    private String title = "Mode List";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        setActionBarTitle(title);
 
         rvHeroes = findViewById(R.id.rv_heroes);
         rvHeroes.setHasFixedSize(true);
@@ -37,10 +41,28 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void setActionBarTitle(String title) {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
+        }
+    }
+
     private void showRecyclerList() {
         rvHeroes.setLayoutManager(new LinearLayoutManager(this));
         ListHeroAdapter listHeroAdapter = new ListHeroAdapter(list);
         rvHeroes.setAdapter(listHeroAdapter);
+    }
+
+    private void showRecyclerGrid() {
+        rvHeroes.setLayoutManager(new GridLayoutManager(this, 2));
+        GridHeroAdapter gridHeroAdapter = new GridHeroAdapter(list);
+        rvHeroes.setAdapter(gridHeroAdapter);
+    }
+
+    private void showRecyclerCardView() {
+        rvHeroes.setLayoutManager(new LinearLayoutManager(this));
+        CardViewHeroAdapter cardViewHeroAdapter = new CardViewHeroAdapter(list);
+        rvHeroes.setAdapter(cardViewHeroAdapter);
     }
 
     @Override
@@ -57,13 +79,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void setMode(int selectMode) {
         if (selectMode == R.id.action_list) {
-
+            title = "Mode List";
+            showRecyclerList();
         }
         if (selectMode == R.id.action_grid) {
-
+            title = "Mode Grid";
+            showRecyclerGrid();
         }
         if (selectMode == R.id.action_cardview) {
-
+            title = "Mode CardView";
+            showRecyclerCardView();
         }
+        setActionBarTitle(title);
     }
 }
