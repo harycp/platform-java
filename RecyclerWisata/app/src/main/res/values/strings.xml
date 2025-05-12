@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RecyclerWisata</string>
+    <string name="wisata_name">Wisata Bersejarah di Dunia</string>
+    <string name="detail">Detail</string>
+    <string name="with_cardview">with CardView</string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+</resources>
