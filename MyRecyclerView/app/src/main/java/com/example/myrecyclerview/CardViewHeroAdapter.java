@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 public class CardViewHeroAdapter extends RecyclerView.Adapter<CardViewHeroAdapter.CardViewViewHolder> {
     private ArrayList<Hero> listHero;
+
     public CardViewHeroAdapter(ArrayList<Hero> list) {
         this.listHero = list;
     }
@@ -58,6 +59,14 @@ public class CardViewHeroAdapter extends RecyclerView.Adapter<CardViewHeroAdapte
                         Toast.LENGTH_SHORT).show();
             }
         });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(holder.itemView.getContext(), "Kamu memilih " + listHero.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
