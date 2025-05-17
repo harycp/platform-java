@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#D6A65C</color> <!-- Gold-ish / Amber -->
+    <color name="primaryDark">#A67C00</color> <!-- Darker Gold -->
+    <color name="accent">#8B5E3C</color> <!-- Brown accent -->
+    <color name="background">#FDF6E3</color> <!-- Warm beige (background) -->
+    <color name="surface">#FFFFFF</color> <!-- Card or panel background -->
+    <color name="textPrimary">#212121</color> <!-- Dark grey/black text -->
+    <color name="textSecondary">#757575</color> <!-- Light grey text -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>
