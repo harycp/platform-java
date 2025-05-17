@@ -7,6 +7,7 @@ public class Schedule implements Parcelable {
     private String courseName;
     private String day;
 
+
     public String getCourseName() {
         return courseName;
     }
